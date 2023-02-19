@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @font-face {
+      font-family: 'PlusJakartaSans';
+      src: url('assets/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+    }
+    body{
+      background-color: rgb(238, 238, 238);
+    }
+    .main_container{
+      font-family:PlusJakartaSans;
+      border-radius:20px;
+      background-color: white;
+      margin:2em auto;
+      padding:2em 2em;
+      width:700px;
+      
+    }
+    .notification{
+      font-size:14px;
+      background-color: rgb(238, 238, 238);
+      border-radius: 10px;
+      margin:1em 2em;
+      padding:1em 1em;
+      cursor:pointer;
+      transition: 0.3s ease;
+      
+    }
+    .notification:hover{
+      background-color: rgb(211, 227, 236);
+      
+    }
+    .read{
+      display:none;
+    }
+    .notification img{
+      float:left;
+      height:40px;
+      margin-right:1em;
+    }
+    .name{
+      font-size:15px;
+      font-weight:bold;
+    }
+    .posttime{
+      color:gray;
+    }
+    .message{
+      border-radius:10px;
+      background-color: rgb(211, 227, 236);
+      margin-top: 1em;
+      margin-left:4em;
+      padding:1em 1em;
+    }
+    .heading{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom:30px;
+      padding:0 2em;
+    }
+    .noti{
+      font-size: 25px;
+      font-weight:bold;
+    }
+    #notificationNum{
+      font-size:25px;
+      padding:3px 10px;
+      background-color:cadetblue;
+      border-radius: 10px;
+      color:white;
+    }
+    .markasread{
+      cursor:pointer;
+    }
+    .markasread:hover{
+      color:cadetblue;
+      text-decoration: underline;
+    }
+    .closeX{
+      font-size:20px;
+      position:relative;
+      float:right;
+      bottom:45px;
+    }
+  </style>
+</head>
+<body>
+  <div class="main_container">
+    <div class="heading">
+      <div class="noti">Notifications <a id="notificationNum"></a></div>
+      <div class="markasread" onclick="markAllRead()">Mark all as read</div>
+    </div>
+    <div class="notification" id="1">
+      <img src="assets/images/avatar-mark-webber.webp">
+      <a class="name">Mark Webber</a>
+      reacted to your recent post My first tournament today!
+      <div class="posttime">
+        1m ago
+      </div>
+      <a class="closeX">&times;</a>
+      
+    </div>
+
+    <div class="notification" id="2">
+      <img src="assets/images/avatar-angela-gray.webp">
+      <a class="name">Angela Gray</a>
+      followed you
+      <div class="posttime">
+        5m ago
+      </div>
+      <a class="closeX">&times;</a>
+    </div>
+
+    <div class="notification" id="3">
+      <img src="assets/images/avatar-jacob-thompson.webp">
+      <a class="name">Jacob Thompson</a>
+      has joined your group Chess Club
+      <div class="posttime">
+        1 day ago
+      </div>
+      <a class="closeX">&times;</a>
+    </div>
+
+    <div class="notification" id="4">
+      <img src="assets/images/avatar-rizky-hasanuddin.webp">
+      <a class="name">Rizky Hasanuddin</a>
+      sent you a private message
+      <div class="posttime">
+        5 days ago
+      </div>
+      <a class="closeX">&times;</a>
+      <div class="message">
+        Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+        I'm already having lots of fun and improving my game.
+      </div>
+      
+    </div>
+
+    <div class="notification" id="5">
+      <img src="assets/images/avatar-kimberly-smith.webp">
+      <a class="name">Kimberly Smith</a>
+      commented on your picture
+      <div class="posttime">
+        1 week ago
+      </div>
+      <a class="closeX">&times;</a>
+    </div>
+
+    <div class="notification" id="6">
+      <img src="assets/images/avatar-nathan-peterson.webp">
+      <a class="name">Nathan Peterson</a>
+      reacted to your recent post 5 end-game strategies to increase your win rate
+      <div class="posttime">
+        2 weeks ago
+      </div>
+      <a class="closeX">&times;</a>
+    </div>
+
+    <div class="notification" id="7">
+      <img src="assets/images/avatar-anna-kim.webp">
+      <a class="name">Anna Kim</a>
+      left the group Chess Club
+      <div class="posttime">
+        2 weeks ago
+      </div>
+      <a class="closeX">&times;</a>
+    </div>
+  </div>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Jtrevena14">Jesse Trevena</a>.
+  </div>
+  <script src="notificationJS.js"></script>
+</body>
+</html>
